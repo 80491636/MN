@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)https://www.tp8.com/tag/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>图片吧标签云</title>
+	
+	<meta name="applicable-device" content="pc">
+	<meta name="viewport" content="width=device-width, initial-scale=0.2">
+	<meta name="referrer" content="origin">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="mobile-agent" content="format=html5; url=https://m.tp8.com/tag/">
+	<meta name="keywords" content="图片吧标签云">
+	<meta name="description" content="图片吧标签页汇集了网站各栏目的所有图片分类，往后如果您想要单独寻找某个分类，可直接到这个页面浏览。">
+	<link rel="shortcut icon" href="https://www.tp8.com/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="__PUBLIC__/index/style/style.css">
+	<link rel="canonical" href="https://www.tp8.com/tag">
+	<script src="https://libs.baidu.com/jquery/1.4.2/jquery.min.js"></script>
+
+</head>
+<body>
+	<div class="header h-pub">
+		{include file="common/header" /}
+	</div>
+
+	<div class="position">
+		<div class="w1200">
+			<span><i></i>当前位置 ：</span> <a href="https://www.tp8.com/" title="图片吧">主页</a> &gt; 标签云
+		</div>
+	</div>
+
+	<div class="list">
+		<div class="w1200 tag">
+			<div class="l-title">
+				<h1>图片吧标签云</h1>
+				<div class="label mb40">
+					<div class="w1200">
+						{volist name="tags" id="vo" key="k" }
+							{if condition="$vo.catalog neq $pretag"}
+							{if condition="$key neq 0"}
+								</div>
+							{/if}
+								<div class="t-title">
+									<h2>{$pretag = $vo.catalog }</h2>
+									<i class="ico-bar cor{:rand(1,9)} ibar1"></i>
+								</div>
+								<div class="bq cl">
+							{else /} 
+								<a href="{$vo.url}" title="{$vo.tag}" target="_blank">{$vo.tag}</a>
+							{/if}
+						{/volist}
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="footer">
+		{include file="common/foot" /}
+	</div>
+
+
+</body></html>

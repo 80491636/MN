@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)https://www.tp8.com/yule/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>娱乐图片 - 第1页 - 图片吧</title>
+	
+	<meta name="applicable-device" content="pc">
+	<meta name="viewport" content="width=device-width, initial-scale=0.2">
+	<meta name="referrer" content="origin">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="mobile-agent" content="format=html5; url=https://m.tp8.com/yule/">
+	<meta name="keywords" content="娱乐图片">
+	<meta name="description" content="图片吧娱乐图片栏目每日分享各类明星、美女等娱乐周边图片，让大家及时掌握明星的最新动态，随时随地欣赏到好看的美女图片，满足大家的各类审美需求。如果大家感兴趣的话，请不要忘了关注我们哦！">
+	<link rel="shortcut icon" href="https://www.tp8.com/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="__PUBLIC__/index/style/style.css">
+	<link rel="canonical" href="https://www.tp8.com/yule/">
+
+</head>
+<body>
+	<div class="header h-pub">
+		{include file="common/header" /}
+	</div>
+
+	<div class="position">
+		<div class="w1200">
+			<span><i></i>当前位置 ：</span> <a href="https://www.tp8.com/" title="图片吧">主页</a> &gt; 娱乐图片
+		</div>
+	</div>
+
+	<div class="list">
+		<div class="w1200">
+			<div class="l-title">
+				<h1>娱乐图片</h1>
+				<p>
+					<span>
+						<a href="https://www.tp8.com/yule/meinv/" title="美女图片">美女图片</a><a href="https://www.tp8.com/yule/rentiyishu/" title="人体艺术">人体艺术</a><a href="https://www.tp8.com/yule/mingxing/" title="明星图片">明星图片</a>					</span>
+				</p>
+			</div>
+			<div class="l-pub">
+				<div class="m-list ml1">
+					<ul class="cl">
+						{volist name="peri" id="vo"}
+						<li><a href="{:url('article/index',array('taglistid'=>$vo.id))}" title="丰满少妇王雨纯制服丝袜西西人体艺术图片" target="_blank">
+							<img style="width: 224px; height: 322px; display: inline;" src="http://mywebsite2.com/{$vo.img}" data-original="__PUBLIC__/index/images/lst.jpg" alt="丰满少妇王雨纯制服丝袜西西人体艺术图片">
+							<div class="list-tit list-tit-short"><p>丰满少妇王雨纯制服丝袜西西人体艺术图片</p></div>
+							<span class="time">2019-09-05</span>
+						</a></li>
+						{/volist}
+					</ul>
+				</div>
+			</div>
+			{$peri->render()}
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<div class="label mb30">
+		<div class="w1200">
+			<h2><i></i>娱乐图片相关标签</h2>
+			<div class="bq cl">
+				{volist name="tags" id="vo"}
+				<a href="{$vo.url}" title="{$vo.tag}" target="_blank">{$vo.tag}</a>
+				{/volist}
+				<a href="https://www.tp8.com/tag/" title="标签云" target="_blank">更多&nbsp;...</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="channel c-pub mb30">
+		<div class="w1200">
+			<h2>娱乐图片推荐</h2>
+			<div class="m-list ml1">
+				<ul class="cl">
+					{volist name="referrer" id="vo"}
+					<li><a href="{:url('article/index',array('taglistid'=>$vo.id))}" title="{$vo.title}" target="_blank">
+						<img style="width:224px;height:322px;" src="http://mywebsite2.com/{$vo.img}" data-original="__PUBLIC__/index/images/lst.jpg" alt="{$vo.title}">
+						<div class="list-tit"><p>{$vo.title}</p></div>
+					</a></li>
+					{/volist}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+			{include file="common/foot" /}
+	</div>
+
+
+</body></html>
