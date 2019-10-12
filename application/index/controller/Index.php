@@ -7,18 +7,27 @@ class Index extends Controller
     public function index()
     {
         //最新图片
-        $news = Db::table('taglist')->order('id desc')->limit(6)->select();
+        $news = db('imglst')->order('id desc')->limit(6)->select();
         //美女图片
-        $peri =  Db::table('taglist')->where('catalog' ,'美女模特')->order('id desc')->limit(10)->select();
+        $peri =  db('imglst')
+        ->alias('a')
+        ->join('tags c','a.tagid = c.id')
+        ->join('catalog d','c.cataid = d.id')
+        ->where(array('d.cataname' => '美女模特'))
+        ->order('a.time desc')
+        ->limit(10)
+        ->select();
+        
         //纹身图片
-        $tattoo =  Db::table('taglist')->where('catalog' ,'纹身图片')->order('id desc')->limit(10)->select();
-        // $tattoo =  Db::name('taglist')
-        // ->alias('a')
-        // ->join('imgcontent b','a.id = b.taglistid')
-        // ->where(array('a.catalog' => '纹身图片'))
-        // ->order('b.time desc')
-        // ->limit(10)
-        // ->select();
+        $tattoo =  db('imglst')
+        ->alias('a')
+        ->join('tags c','a.tagid = c.id')
+        ->join('catalog d','c.cataid = d.id')
+        ->where(array('d.cataname' => '纹身图片'))
+        ->order('a.time desc')
+        ->limit(10)
+        ->select();
+        // dump($tattoo);die;
         $this->assign([
             'news'=> $news,
             'peri' => $peri,

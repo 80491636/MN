@@ -31,22 +31,27 @@
 		<div class="w1200 tag">
 			<div class="l-title">
 				<h1>图片吧标签云</h1>
-				<div class="label mb40">
-					<div class="w1200">
-						{volist name="tags" id="vo" key="k" }
-							{if condition="$vo.catalog neq $pretag"}
-							{if condition="$key neq 0"}
+				{volist name="tags" id="vo"}
+
+				{if condition="$pretag eq $vo.cataname"}
+					<a href="/tag/zhouyanxi.html" title="{$vo.tagname}" target="_blank">{$vo.tagname}</a>
+				{else /}
+					{if condition = "$pretag neq ' '"}
 								</div>
-							{/if}
-								<div class="t-title">
-									<h2>{$pretag = $vo.catalog }</h2>
-									<i class="ico-bar cor{:rand(1,9)} ibar1"></i>
-								</div>
-								<div class="bq cl">
-							{else /} 
-								<a href="{$vo.url}" title="{$vo.tag}" target="_blank">{$vo.tag}</a>
-							{/if}
-						{/volist}
+							</div>
+						</div>
+					{/if}
+					<div class="label mb40">
+						<div class="w1200">
+							<div class="t-title">
+								<h2>{$pretag = $vo.cataname}</h2>
+								<i class="ico-bar cor{:rand(1,9)} ibar1"></i>
+							</div>
+					<div class="bq cl">
+						<a href="/tag/zhouyanxi.html" title="{$vo.tagname}" target="_blank">{$vo.tagname}</a>
+				{/if} 
+
+				{/volist}
 						</div>
 					</div>
 				</div>

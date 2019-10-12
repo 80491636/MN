@@ -6,6 +6,8 @@ class Lst extends Controller
 {
     public function index()
     {
+        $tagid = input('id');
+        $list = db('imglst')->where('tagid',$tagid)->order('time desc')->paginate(20);
         //美女图片
         $peri =  Db::table('taglist')->where('catalog' ,'美女模特')->order('id asc')->paginate(20);
         //热门标签

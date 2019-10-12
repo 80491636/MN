@@ -64,7 +64,7 @@
                                                         <td align="center">{$vo.title}</td>
                                                         <td align="center">{$vo.author}</td>
                                                         <td align="center">
-                                                            {if condition="$vo['state'] eq 1 "}
+                                                            {if condition="$vo['state'] eq 1 "} 
                                                             已推荐
                                                             {else /}
                                                             未推荐
@@ -72,12 +72,12 @@
                                                         </td>
                                                         <td align="center">
                                                             {if condition="$vo['pic'] neq '' "}
-                                                            <img src="__IMG__{$vo.pic}" height="50">
+                                                            <img src="{:str_replace('https://img.tp8.com','http://img.perichina.cn',$vo.pic);}" height="50">
                                                             {else /}
                                                             暂无缩略图
                                                             {/if}
                                                         </td>
-                                                        <th class="text-center">{$vo.cate.catename}</th>
+                                                        <th class="text-center">{$vo.title}</th>
                                                         <td align="center">
                                                             <a href="{:url('article/edit',array('id'=>$vo['id']))}" class="btn btn-primary btn-sm shiny">
                                                                 <i class="fa fa-edit"></i> 编辑
@@ -91,6 +91,7 @@
                                                 </tbody>
                                             </table>
                                         </div>
+                                        {$list->render()}
                                         <div></div>
                                     </div>
                                 </div>
