@@ -30,15 +30,9 @@
 				<p>
 					<!--相关子标签-->
 					<span>
-<<<<<<< HEAD
 						{volist name="$subtag" id="vo"}
 						<a href="{:url('tags/index',array('tagid'=>$vo.id))}" title="{$vo.tagname}">{$vo.tagname}</a>
 						{/volist}			
-=======
-						<a href="https://www.tp8.com/yule/meinv/" title="美女图片">美女图片</a>
-						<a href="https://www.tp8.com/yule/rentiyishu/" title="人体艺术">人体艺术</a>
-						<a href="https://www.tp8.com/yule/mingxing/" title="明星图片">明星图片</a>					
->>>>>>> 7e7d444fde09e3e25ef4ae0e042c9a5ec088e6be
 					</span>
 				</p>
 			</div>
@@ -47,17 +41,10 @@
 				<div class="m-list ml1">
 					<ul class="cl">
 						{volist name="peri" id="vo"}
-<<<<<<< HEAD
 						<li><a href="{:url('article/index',array('imgid'=>$vo.id))}" title="{$vo.title}" target="_blank">
 							<img style="width: 224px; height: 322px; display: inline;" src="{:str_replace('https://img.tp8.com','http://img.perichina.cn',$vo.cover)}" data-original="__PUBLIC__/index/images/lst.jpg" alt="丰满少妇王雨纯制服丝袜西西人体艺术图片">
 							<div class="list-tit list-tit-short"><p>{$vo.title}</p></div>
 							<span class="time">{$vo.time}</span>
-=======
-						<li><a href="{:url('article/index',array('taglistid'=>$vo.id))}" title="丰满少妇王雨纯制服丝袜西西人体艺术图片" target="_blank">
-							<img style="width: 224px; height: 322px; display: inline;" src="{:str_replace('https://img.tp8.com','http://img.perichina.cn',$vo.cover);}" data-original="__PUBLIC__/index/images/lst.jpg" alt="丰满少妇王雨纯制服丝袜西西人体艺术图片">
-							<div class="list-tit list-tit-short"><p>丰满少妇王雨纯制服丝袜西西人体艺术图片</p></div>
-							<span class="time">2019-09-05</span>
->>>>>>> 7e7d444fde09e3e25ef4ae0e042c9a5ec088e6be
 						</a></li>
 						{/volist}
 					</ul>
@@ -69,7 +56,6 @@
 	</div>
 
 	<div class="label mb30">
-<<<<<<< HEAD
 			<div class="w1200">
 				<h2><i></i>美女图片相关标签</h2>
 				<div class="bq cl">
@@ -94,31 +80,6 @@
 						{/volist}
 					</ul>
 				</div>
-=======
-		<div class="w1200">
-			<h2><i></i>美女图片相关标签</h2>
-			<div class="bq cl">
-				{volist name="tags" id="vo"}
-				<a href="{$vo.url}" title="{$vo.tagname}" target="_blank">{$vo.tagname}</a>
-				{/volist}
-				<a href="https://www.tp8.com/tag/" title="标签云" target="_blank">更多&nbsp;...</a>
-			</div>
-		</div>
-	</div>
-
-	<div class="channel c-pub mb30">
-		<div class="w1200">
-			<h2>美女图片推荐</h2>
-			<div class="m-list ml1">
-				<ul class="cl">
-					{volist name="referrer" id="vo"}
-					<li><a href="{:url('article/index',array('taglistid'=>$vo.id))}" title="{$vo.title}" target="_blank">
-						<img style="width:224px;height:322px;" src="{:str_replace('https://img.tp8.com','http://img.perichina.cn',$vo.cover);}" data-original="__PUBLIC__/index/images/lst.jpg" alt="{$vo.title}">
-						<div class="list-tit"><p>{$vo.title}</p></div>
-					</a></li>
-					{/volist}
-				</ul>
->>>>>>> 7e7d444fde09e3e25ef4ae0e042c9a5ec088e6be
 			</div>
 		</div>
 		<div class="footer">
