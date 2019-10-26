@@ -1,20 +1,17 @@
 <!DOCTYPE html>
-<!-- saved from url=(0024)https://www.tp8.com/tag/ -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>图片吧标签云</title>
+	<title>美女网标签云</title>
 	
 	<meta name="applicable-device" content="pc">
 	<meta name="viewport" content="width=device-width, initial-scale=0.2">
 	<meta name="referrer" content="origin">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta http-equiv="mobile-agent" content="format=html5; url=https://m.tp8.com/tag/">
-	<meta name="keywords" content="图片吧标签云">
-	<meta name="description" content="图片吧标签页汇集了网站各栏目的所有图片分类，往后如果您想要单独寻找某个分类，可直接到这个页面浏览。">
-	<link rel="shortcut icon" href="https://www.tp8.com/favicon.ico" type="image/x-icon">
+	<meta name="keywords" content="美女网标签云,美女图片,高清图片,性感图片,国产美女,图片大全">
+	<meta name="description" content="美女（www.perichina.cn）旨在分享美女图片、高清图片、性感图片、国产美女等高清精美图片大全，我们以专注分享高质量图片为宗旨，立志成为国内最强大的高清图片网站，为广大摄影爱好者提供服务。">
+	<link rel="shortcut icon" href="https://www.perichina.cn/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="__PUBLIC__/index/style/style.css">
-	<link rel="canonical" href="https://www.tp8.com/tag">
 	<script src="https://libs.baidu.com/jquery/1.4.2/jquery.min.js"></script>
-
+	<script type="text/javascript" src="__PUBLIC__/index/js/public.js"></script>
 </head>
 <body>
 	<div class="header h-pub">
@@ -23,18 +20,18 @@
 
 	<div class="position">
 		<div class="w1200">
-			<span><i></i>当前位置 ：</span> <a href="https://www.tp8.com/" title="图片吧">主页</a> &gt; 标签云
+			<span><i></i>当前位置 ：</span> <a href="https://www.perichina.cn/" title="美女网">主页</a> &gt; 标签云
 		</div>
 	</div>
 
 	<div class="list">
 		<div class="w1200 tag">
 			<div class="l-title">
-				<h1>图片吧标签云</h1>
+				<h1>美女网-标签云</h1>
 				{volist name="tags" id="vo"}
 
 				{if condition="$pretag eq $vo.cataname"}
-					<a href="/tag/zhouyanxi.html" title="{$vo.tagname}" target="_blank">{$vo.tagname}</a>
+					<a href="{:url('tags/index',array('tagid'=>$vo.id))}" title="{$vo.tagname}" target="_blank">{$vo.tagname}</a>
 				{else /}
 					{if condition = "$pretag neq ' '"}
 								</div>
@@ -48,7 +45,7 @@
 								<i class="ico-bar cor{:rand(1,9)} ibar1"></i>
 							</div>
 					<div class="bq cl">
-						<a href="/tag/zhouyanxi.html" title="{$vo.tagname}" target="_blank">{$vo.tagname}</a>
+						<a href="{:url('tags/index',array('tagid'=>$vo.id))}" title="{$vo.tagname}" target="_blank">{$vo.tagname}</a>
 				{/if} 
 
 				{/volist}

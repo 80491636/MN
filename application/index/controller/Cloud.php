@@ -11,7 +11,7 @@ class Cloud extends Controller
         ->join('catalog b','a.cataid = b.id')
         // ->where(array('d.cataname' => '美女模特'))
         ->order('b.cataname desc')
-        // ->limit(10)
+        ->field('a.cataid,a.tagname,b.id,b.cataname,a.id')
         ->select();
         // dump($tags);die;
         $this->assign([
