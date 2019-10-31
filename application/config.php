@@ -89,13 +89,13 @@ return [
     // 是否开启路由
     'url_route_on'           => true,
     // 路由使用完整匹配
-    'route_complete_match'   => false,
+    'route_complete_match'   => true,
     // 路由配置文件（支持配置多个）
     'route_config_file'      => ['route'],
     // 是否开启路由解析缓存
     'route_check_cache'      => false,
     // 是否强制使用路由
-    'url_route_must'         => true,
+    'url_route_must'         => false,
     // 域名部署
     'url_domain_deploy'      => false,
     // 域名根，如thinkphp.cn
@@ -240,4 +240,25 @@ return [
         'var_page'  => 'page',
         'list_rows' => 15,
     ],
+
+    //验证码配置
+    'captcha' => [
+        // 验证码字符集合
+        'codeSet' => '2345678abcdefhijkmnpqrstuvwxyzABCDEFGHJKLMNPQRTUVWXY', 
+        // 验证码字体大小(px)
+        'fontSize' => 14, 
+        // 是否画混淆曲线
+        'useCurve' => false, 
+        // 验证码图片高度
+        'imageH' => 30,
+        //是否添加杂点
+        'useNoise'=>false,
+        // 验证码图片宽度
+        'imageW' => 100, 
+        // 验证码位数
+        'length' => 4, 
+        // 验证成功后是否重置 
+        'reset' => true
+    ],
+
 ];

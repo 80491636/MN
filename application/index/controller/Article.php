@@ -26,7 +26,7 @@ class Article extends Controller
             'prepage' => $prepage,
             'nextpage' => $nextpage,
         ]);
-        return $this->fetch('Article');
+        return $this->fetch('article');
     }
     //相关标签
     public function reltags()

@@ -25,6 +25,6 @@ class Lst extends Controller
             'subtag' => $subtag,
             'site' => $site,
         ]);
-        return $this->fetch('Lst');
+        return $this->fetch('lst');
     }
 }
